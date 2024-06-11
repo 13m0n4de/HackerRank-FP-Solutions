@@ -9,11 +9,9 @@
 #|         (cdr lst) |#
 #|         (cons (car lst) acc))]))) |#
 
-
 ;; (: reverse-list (-> (Listof Integer) (Listof Integer)))
 (define (reverse-list lst)
   (foldl cons '() lst))
-
 
 (define (read-list)
   (let read-list-helper ([acc '()])
@@ -21,6 +19,5 @@
       (if (eof-object? x)
           (reverse acc)
           (read-list-helper (cons x acc))))))
-
 
 (for-each displayln (reverse-list (read-list)))

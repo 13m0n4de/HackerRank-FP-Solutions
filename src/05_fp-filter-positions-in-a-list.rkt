@@ -8,14 +8,12 @@
       [(odd? index) (remove-odd-helper (cdr lst) (+ index 1) acc)]
       [else (remove-odd-helper (cdr lst) (+ index 1) (cons (car lst) acc))])))
 
-
 (define (read-list)
   (let read-list-helper ([acc '()])
     (let ([x (read)])
       (if (eof-object? x)
           (reverse acc)
           (read-list-helper (cons x acc))))))
-
 
 (let* ([input (read-list)]
        [lst (cdr input)])
