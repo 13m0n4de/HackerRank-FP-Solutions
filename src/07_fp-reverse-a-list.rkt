@@ -9,7 +9,7 @@
 #|         (cdr lst) |#
 #|         (cons (car lst) acc))]))) |#
 
-;; (: reverse-list (-> (Listof Integer) (Listof Integer)))
+;; reverse-list : (Listof Integer) -> (Listof Integer)
 (define (reverse-list lst)
   (foldl cons '() lst))
 

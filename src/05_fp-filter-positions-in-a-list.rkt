@@ -1,6 +1,6 @@
 #lang racket
 
-;; (: remove-odd (-> (Listof Integer) (Listof Integer)))
+;; remove-odd : (Listof Integer) -> (Listof Integer)
 (define (remove-odd lst)
   (let remove-odd-helper ([lst lst] [index 0] [acc '()])
     (cond

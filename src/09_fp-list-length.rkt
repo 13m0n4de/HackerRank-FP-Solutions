@@ -1,6 +1,6 @@
 #lang racket
 
-;; (: list-length (-> (Listof Integer) Integer))
+;; list-length (Listof Integer) -> Integer
 (define (list-length lst)
   (let list-length-helper ([lst lst] [acc 0])
     (if (empty? lst)

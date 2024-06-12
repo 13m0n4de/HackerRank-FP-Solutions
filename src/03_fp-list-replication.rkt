@@ -1,6 +1,6 @@
 #lang racket
 
-;; (: replicate-elements (-> Integer (Listof Integer) (Listof Integer)))
+;; replicate-elements : Integer (Listof Integer) -> (Listof Integer)
 (define (replicate-elements n lst)
   (append-map (lambda (num) (make-list n num)) lst))
 
