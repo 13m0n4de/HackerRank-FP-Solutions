@@ -1,6 +1,6 @@
 #lang racket
 
-;; (: update-list (-> (Listof Integer) (Listof Integer)))
+;; update-list : (Listof Integer) -> (Listof Integer)
 (define (update-list lst)
   (map abs lst))
 

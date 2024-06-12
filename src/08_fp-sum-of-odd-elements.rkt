@@ -10,7 +10,7 @@
 #|            (sum-odd-helper (cdr lst) (+ acc x)) |#
 #|            (sum-odd-helper (cdr lst) acc))]))) |#
 
-;; (: sum-odd (-> (Listof Integer) Integer))
+;; sum-odd : (Listof Integer) -> Integer
 (define (sum-odd lst)
   (apply + (filter odd? lst)))
 

@@ -1,6 +1,6 @@
 #lang racket
 
-;; (: filter-less-than (-> Integer (Listof Integer) (Listof Integer)))
+;; filter-less-than : Integer (Listof Integer) -> (Listof Integer)
 (define (filter-less-than delim lst)
   (filter (lambda (num) (< num delim)) lst))
 
