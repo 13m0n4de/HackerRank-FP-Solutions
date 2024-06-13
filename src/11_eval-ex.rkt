@@ -1,15 +1,14 @@
 #lang racket
 
 ;; factorial : Integer -> Integer
-(define/contract (factorial n)
-  (-> integer? integer?)
+(define (factorial n)
   (let factorial-helper ([acc 1] [n n])
     (if (= n 0)
         acc
         (factorial-helper (* acc n) (- n 1)))))
 
 ;; eval-ex : Real -> Real
-(define/contract (eval-ex x)
+(define (eval-ex x)
   (-> real? real?)
   (let eval-ex-helper ([acc 0] [y 0])
     (if (= y 10)
